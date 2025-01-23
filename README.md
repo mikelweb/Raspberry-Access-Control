@@ -26,6 +26,8 @@ Arduino will process the response and open the door by activating the relay atta
 **Card reader** only types the card number to the Raspberry like a keyboard does.
 It only needs a mini USB cable conected to Raspberry, usually provided with the card reader.
 
+![card-reader](https://github.com/mikelweb/raspberry-access-control/blob/master/Card%20Reader%20USB%20EM4100%20TK4100%20125khz.png?raw=true)
+
 ### Raspberry
 **Raspberry** is runing raspbian or linux debian in console mode, configured to automatically log in and automatically run a bash script. This script is waiting to read a card number from the ~~keyboard~~ reader. When it gets one, it makes an http GET request to the server passing the card number readed and the reader name as parameters. If the response is true, it activates the pin where the relay is connected for 1 second.
 

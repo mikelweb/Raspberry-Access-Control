@@ -31,5 +31,13 @@ It only needs a mini USB cable conected to Raspberry, usually provided with the 
 ### Raspberry
 **Raspberry** is runing raspbian or linux debian in console mode, configured to automatically log in and automatically run a bash script. This script is waiting to read a card number from the ~~keyboard~~ reader. When it gets one, it makes an http GET request to the server passing the card number readed and the reader name as parameters. If the response is true, it activates the pin where the relay is connected for 1 second.
 
+```
+#!/bin/bash
+while : ; do
+read cardNumber
+wget http://192.168.1.5/read-card.php?cardNumber=${cardNumber}
+done
+```
+
 ### Web server
 **Web server** can be the Raspberry itself, a local PC runing Apache, PHP and MySql, or a remote web server with a public domain name.

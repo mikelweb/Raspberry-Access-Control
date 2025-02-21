@@ -1,4 +1,4 @@
-# raspberry-access-control
+# Raspberry Access Control
 ###### A simple RFID card access control using RaspberryPi+PHP+MySQL
 
 The purpose of this project is to provide a very low cost access control system.

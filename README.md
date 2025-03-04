@@ -44,7 +44,7 @@ done
 
 ```
 <?php
-$num_card = $_POST["num_card"];
+$num_card = $_GET["cardNumber"];
 $date = time();
 
 $servername = "localhost";
